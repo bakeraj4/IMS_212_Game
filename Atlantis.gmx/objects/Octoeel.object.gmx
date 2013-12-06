@@ -36,6 +36,9 @@ grav=1;
 waterRes=1;
 
 attached=false;
+image_speed=0.15;
+image_xscale=0.45;;
+image_yscale=0.45;
 </string>
           </argument>
         </arguments>
