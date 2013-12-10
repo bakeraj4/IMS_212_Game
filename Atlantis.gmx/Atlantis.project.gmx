@@ -26,6 +26,7 @@
     <sprite>sprites\hurtKracken</sprite>
     <sprite>sprites\spear</sprite>
     <sprite>sprites\crabShell</sprite>
+    <sprite>sprites\hurtKracken_s</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -43,6 +44,7 @@
     <object>objects\kracken</object>
     <object>objects\arm</object>
     <object>objects\spear_o</object>
+    <object>objects\eye_o</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room2</room>

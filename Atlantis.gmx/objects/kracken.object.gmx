@@ -31,6 +31,7 @@ hp=100;
 hurt=false;
 timesHurt=0;
 deployedEye=false;
+eyeKilled=false;
 visable=false;
 
 </string>
@@ -89,15 +90,22 @@ else if(visable){
     if(hurt){
         if(!deployedEye){
             //place the eye and change the body sprite
+            deployedEye=true;
+            sprite_index=hurtKracken_s;
+            instance_create(7200,y,eye_o);
         }
         else{
-            //hurt threahold   
+            //eye hit by spear
+                //third time then destroy kracken
+                //else hurt =false; deployedEye=false madeArms=false
         }
     }
     else{
        if(arms==0){
         if(madeArms){
             //put into hurt mode and timesHurt++
+            hurt=true;
+            timesHurt++;
         }
         else{
             arms=3;
@@ -107,10 +115,7 @@ else if(visable){
             instance_create(7168,786,arm);
         }
        }
-    }
-        
-        //if an arm is destoryed arm--, in the arm code
-    
+    }    
 }
 </string>
           </argument>
