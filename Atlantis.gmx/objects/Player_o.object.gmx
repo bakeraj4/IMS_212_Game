@@ -208,7 +208,8 @@ if(wait==0){
         if(u_key){
             v_speed=-2.5;
         }
-
+        
+        
         v_speed+=grav;
         if place_meeting(x,y+v_speed,block){
             if(v_speed&gt;=0){
