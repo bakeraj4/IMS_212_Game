@@ -34,6 +34,8 @@ deployedEye=false;
 eyeKilled=false;
 visable=false;
 
+instance_create(7200,y,eye_o);
+
 </string>
           </argument>
         </arguments>
@@ -92,12 +94,18 @@ else if(visable){
             //place the eye and change the body sprite
             deployedEye=true;
             sprite_index=hurtKracken_s;
-            instance_create(7200,y,eye_o);
+            eye_o.isVisable=true;
         }
         else{
-            //eye hit by spear
-                //third time then destroy kracken
-                //else hurt =false; deployedEye=false madeArms=false
+            if(eye_o.hasBeenHurt==3){//eye hit by spear
+                //destroy it and then destroy kracken if krcken.timesHurt=3
+            }
+            else if(!eye_o.isVisable){ 
+                hurt =false; 
+                deployedEye=false;
+                madeArms=false;
+                sprite_index=Kracken_1;
+            }
         }
     }
     else{
