@@ -169,6 +169,10 @@ if(wait==0){
                  x+=sign(h_speed);
             h_speed=0;        
         }
+        else if(place_meeting(x,y,kracken)){
+            h_speed=-15;
+            hp=hp-10;
+        }
         //check for vertical
         v_speed+=grav;
         if place_meeting(x,y+v_speed,block){
@@ -243,29 +247,6 @@ else
     wait--;
     
 //spring board speed up to simulate soe swimming then slow daon from the resistance
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="kracken">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>h_speed=0;
 </string>
           </argument>
         </arguments>
