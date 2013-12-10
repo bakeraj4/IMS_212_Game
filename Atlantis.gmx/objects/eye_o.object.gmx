@@ -29,6 +29,7 @@
 image_yscale=5;
 hasBeenHurt=0;
 isVisable=false;
+destroy=false;
 </string>
           </argument>
         </arguments>
@@ -60,6 +61,8 @@ if isVisable{
 }
 else
     image_alpha=0;
+if destroy
+    instance_destroy();
 </string>
           </argument>
         </arguments>

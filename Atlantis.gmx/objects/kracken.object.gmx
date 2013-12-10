@@ -99,6 +99,8 @@ else if(visable){
         else{
             if(eye_o.hasBeenHurt==3){//eye hit by spear
                 //destroy it and then destroy kracken if krcken.timesHurt=3
+                instance_destroy();
+                eye_o.destroy=true;
             }
             else if(!eye_o.isVisable){ 
                 hurt =false; 
