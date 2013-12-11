@@ -29,7 +29,7 @@
 hpCounter=100;
 skippedCycles=30;
 
-sprite_index=crabShell;
+
 
 hp=30;
 v_speed=0;
@@ -88,9 +88,8 @@ while(!place_meeting(x,y+1,block)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=0;
-if(walkMode){
-    //i=1;
+            <string>if(walkMode){
+    sprite_index=sprite2;
     if(Player_o.x&lt;x &amp;&amp; abs(Player_o.x-x)&gt;15)//on left and 15 pixels at min away
         h_speed=-1;//tiny amount toward the player
     else if(Player_o.x&gt;x &amp;&amp; abs(Player_o.x-x)&gt;15)//on right and 15 pixels at min away
@@ -114,7 +113,7 @@ if(walkMode){
     if place_meeting(x,y,Player_o){
         canMove=false;
         walkMode=false;
-        //i=0;
+        sprite_index=crabShell;
     }
    
     
@@ -125,6 +124,7 @@ if(walkMode){
 
     //pincer attack
 }else{
+    sprite_index=crabShell;
     if(skippedCycles==0){
         skippedCycles=30;
         //sleeping in its shell getting hp
@@ -137,7 +137,7 @@ if(walkMode){
         }
         if(abs(Player_o.x-x)&lt;50){//with in 50 pixels
             walkMode=true;
-            i=1;
+            sprite_index=sprite2;
         }
         else{
             walkMode=false;
@@ -148,14 +148,7 @@ if(walkMode){
         skippedCycles--;
     }
 }
-
-if(i=1){
-    image_speed=0.3;
-    sprite_index=sprite2;
-}
-else if(i=0){
-    sprite_index=crabShell;
-}
+image_speed=0.3;
 </string>
           </argument>
         </arguments>
