@@ -100,10 +100,10 @@ else{
     attached=false;
 }
 
-/* needs to be chnged to not being visable and that will turn the game off
+//needs to be chnged to not being visable and that will turn the game off
 if(hp&lt;=0){
-    instance_destroy();
-}*/
+    room_restart();
+}
 </string>
           </argument>
         </arguments>
