@@ -91,9 +91,9 @@ while(!place_meeting(x,y+1,block)){
             <string>if(walkMode){
     sprite_index=sprite2;
     if(Player_o.x&lt;x &amp;&amp; abs(Player_o.x-x)&gt;15)//on left and 15 pixels at min away
-        h_speed=-1;//tiny amount toward the player
+        h_speed=-6;//tiny amount toward the player
     else if(Player_o.x&gt;x &amp;&amp; abs(Player_o.x-x)&gt;15)//on right and 15 pixels at min away
-        h_speed=1;//tiny amount toward the player
+        h_speed=6;//tiny amount toward the player
     else
         h_speed=0;
     //horizontal collisions checking
@@ -149,6 +149,30 @@ while(!place_meeting(x,y+1,block)){
     }
 }
 image_speed=0.3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="spear_o">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(spear_o.inUse)
+    hp--;
 </string>
           </argument>
         </arguments>

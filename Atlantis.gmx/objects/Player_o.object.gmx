@@ -142,14 +142,14 @@ if(wait==0){
             }
         }
         if(d_key){
-            v_speed=10;
+            v_speed=9.5;
         }
         if(r_key){//right
-            h_speed=10;
-           image_xscale=1;
+            h_speed=9.5;
+            image_xscale=1;
         }
         if(l_key){//left
-         h_speed=-10;
+         h_speed=-9.5;
          image_xscale=-1;
         }
         if((d_key&amp;&amp;u_key)||(!d_key&amp;&amp;!u_key)){
@@ -172,6 +172,10 @@ if(wait==0){
         else if(place_meeting(x,y,kracken)){
             h_speed=-15;
             hp=hp-10;
+        }
+        else if(place_meeting(x,y,Octoeel)){
+            h_speed*=0.5;
+            v_speed*=0.5;
         }
         //check for vertical
         v_speed+=grav;

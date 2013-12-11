@@ -45,6 +45,7 @@
     <object>objects\arm</object>
     <object>objects\spear_o</object>
     <object>objects\eye_o</object>
+    <object>objects\object12</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room2</room>
