@@ -91,9 +91,9 @@ while(!place_meeting(x,y+1,block)){
             <string>if(walkMode){
     sprite_index=sprite2;
     if(Player_o.x&lt;x &amp;&amp; abs(Player_o.x-x)&gt;15)//on left and 15 pixels at min away
-        h_speed=-6;//tiny amount toward the player
+        h_speed=-8;//tiny amount toward the player
     else if(Player_o.x&gt;x &amp;&amp; abs(Player_o.x-x)&gt;15)//on right and 15 pixels at min away
-        h_speed=6;//tiny amount toward the player
+        h_speed=8;//tiny amount toward the player
     else
         h_speed=0;
     //horizontal collisions checking
@@ -102,7 +102,9 @@ while(!place_meeting(x,y+1,block)){
             x+=sign(h_speed);
         h_speed=0;        
     }
-
+    if place_meeting(x+h_speed,y,Player_o){
+        Player_o.hp-=10;       
+    }
     
     //but will stay on the platform(always need contact to the bottom)
     canMove=false;
@@ -110,7 +112,7 @@ while(!place_meeting(x,y+1,block)){
         canMove=true;
     }
     //if collison above with the player
-    if place_meeting(x,y,Player_o){
+    if place_meeting(x,y+32,Player_o){
         canMove=false;
         walkMode=false;
         sprite_index=crabShell;

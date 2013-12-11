@@ -135,17 +135,17 @@ j_key= keyboard_check_direct(vk_space);
 if(wait==0){
     if(inWater){
         if(u_key){
-         v_speed=-10;
+         v_speed=-7.5;
          if(onGround){
              v_speed*=4;
              onGround=false;
             }
         }
         if(d_key){
-            v_speed=9.5;
+            v_speed=7.5;
         }
         if(r_key){//right
-            h_speed=9.5;
+            h_speed=7.5;
             image_xscale=1;
         }
         if(l_key){//left
